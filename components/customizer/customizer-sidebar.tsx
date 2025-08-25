@@ -66,23 +66,26 @@ export function CustomizerSidebar({
 
         <SidebarContent className="@container relative my-0 max-h-svh pt-2 pb-0 group-data-[collapsible=icon]:invisible [&>button]:hidden">
           <ScrollArea className="flex flex-col overflow-hidden w-full">
-             <TabsContent
-               value="sidebar"
-               className="mx-1 mb-2 flex flex-col space-y-4"
-             >
-               {state === "expanded" && (<>
-                 <History />
-               </>)}
-             </TabsContent>
- 
-             <TabsContent
-               value="languages"
-               className="mx-2.5 mb-2 gap-4"
-             >
-               <Command className="bg-background border">
-                 <CommandInput className="!h-14" placeholder={lt("search-languages", "Search Languages")} />
- 
-                <CommandList className="flex-1 min-h-[80vh] lg:min-h-[52.5vh]">
+            <TabsContent
+              value="sidebar"
+              className="mx-1 mb-2 flex flex-col space-y-4"
+            >
+              {state === "expanded" && (<>
+                <History />
+              </>)}
+            </TabsContent>
+
+            <TabsContent
+              value="languages"
+              className="mx-2.5 mb-2 gap-4"
+            >
+              {/* <ControlSection title="Languages" id="languages" className="p-0" expanded>
+
+              </ControlSection> */}
+              <Command className="bg-background border h-[80vh] lg:h-[55.7vh]">
+                <CommandInput className="!h-14" placeholder={lt("search-languages", "Search Languages")} />
+
+                <ScrollArea className="flex h-full flex-col">
                   <CommandEmpty>No language found.</CommandEmpty>
                   <CommandGroup>
                     {i18n.locales.map((lang) => (
@@ -106,58 +109,58 @@ export function CustomizerSidebar({
                       </CommandItem>
                     ))}
                   </CommandGroup>
-                </CommandList>
-               </Command>
-             </TabsContent>
- 
-             <TabsContent
-               value="palette"
-               className="mx-2.5 mb-2 flex flex-col space-y-4"
-             >
-               <section className="flex-1 space-y-1.5 max-sm:w-full max-sm:max-w-full">
-                 {/* <ActionButtons /> */}
-                 <Label className="flex items-center gap-1 pb-2">
-                   <PaintBucket className="size-4" /> Theme presets
-                 </Label>
-                 <AllPresetsControl />
-               </section>
-               <ColorTokens />
-             </TabsContent>
- 
-             <TabsContent value="tokens" className="mx-2.5 mb-2">
-               <section className="space-y-1.5">
-                 <Label className="flex items-center gap-1 pb-2">
-                   <SlidersHorizontal className="size-4" /> Other tokens
-                 </Label>
- 
-                 <ControlSection title="Surface" expanded className="p-0">
-                   <SurfaceShadesControl className="bg-transparent" />
-                   <div className="text-muted-foreground mb-3 truncate px-3 text-xs">
-                     For background, card, popover, muted, accent...
-                   </div>
-                 </ControlSection>
- 
-                 <ControlSection title="Radius" expanded>
-                   <RadiusSliderControl />
-                 </ControlSection>
- 
-                 <ControlSection title="Shadows">
-                   <ShadowsControl />
-                 </ControlSection>
- 
-                 <ControlSection title="Spacing">
-                   <ComingSoon />
-                 </ControlSection>
- 
-               </section>
-             </TabsContent>
- 
-             <TabsContent value="typography" className="mx-2.5 mb-2">
-               <Typography />
-             </TabsContent>
+                </ScrollArea>
+              </Command>
+            </TabsContent>
+
+            <TabsContent
+              value="palette"
+              className="mx-2.5 mb-2 flex flex-col space-y-4"
+            >
+              <section className="flex-1 space-y-1.5 max-sm:w-full max-sm:max-w-full">
+                {/* <ActionButtons /> */}
+                <Label className="flex items-center gap-1 pb-2">
+                  <PaintBucket className="size-4" /> Theme presets
+                </Label>
+                <AllPresetsControl />
+              </section>
+              <ColorTokens />
+            </TabsContent>
+
+            <TabsContent value="tokens" className="mx-2.5 mb-2">
+              <section className="space-y-1.5">
+                <Label className="flex items-center gap-1 pb-2">
+                  <SlidersHorizontal className="size-4" /> Other tokens
+                </Label>
+
+                <ControlSection title="Surface" expanded className="p-0">
+                  <SurfaceShadesControl className="bg-transparent" />
+                  <div className="text-muted-foreground mb-3 truncate px-3 text-xs">
+                    For background, card, popover, muted, accent...
+                  </div>
+                </ControlSection>
+
+                <ControlSection title="Radius" expanded>
+                  <RadiusSliderControl />
+                </ControlSection>
+
+                <ControlSection title="Shadows">
+                  <ShadowsControl />
+                </ControlSection>
+
+                <ControlSection title="Spacing">
+                  <ComingSoon />
+                </ControlSection>
+
+              </section>
+            </TabsContent>
+
+            <TabsContent value="typography" className="mx-2.5 mb-2">
+              <Typography />
+            </TabsContent>
           </ScrollArea>
-         </SidebarContent>
- 
+        </SidebarContent>
+
         <SidebarFooter className="px-2">
           {state === "expanded" ? (
             <>

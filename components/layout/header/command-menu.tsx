@@ -63,7 +63,7 @@ export function CommandMenu({ ...props }: DialogProps) {
       >
         <span className="hidden lg:inline-flex absolute left-1.5">{lt("search-long", "Search for joy")}</span>
         <span className="inline-flex lg:hidden absolute left-1.5">{lt("search-short", "Search")}</span>
-        <kbd className="text-[8px] pointer-events-none absolute right-[0.3rem] top-[0.35rem] hidden h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono font-medium opacity-100 sm:flex">
+        <kbd className="text-[8px] pointer-events-none absolute right-[0.3rem] top-[0.35rem] hidden h-5 select-none items-center gap-1 rounded border bg-card px-1.5 font-mono font-medium opacity-100 sm:flex">
           <span className="text-[10px]">⌘</span>K
         </kbd>
       </Button>
