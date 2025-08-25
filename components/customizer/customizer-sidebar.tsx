@@ -79,9 +79,6 @@ export function CustomizerSidebar({
               value="languages"
               className="mx-2.5 mb-2 gap-4"
             >
-              {/* <ControlSection title="Languages" id="languages" className="p-0" expanded>
-
-              </ControlSection> */}
               <Command className="bg-background border h-[80vh] lg:h-[55.7vh]">
                 <CommandInput className="!h-14" placeholder={lt("search-languages", "Search Languages")} />
 
