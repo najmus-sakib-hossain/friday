@@ -606,7 +606,7 @@ export function SiteHeader() {
         <Button
           variant="outline"
           size="icon"
-          className="group/toggle extend-touch-target size-8 mx-2"
+          className="group/toggle extend-touch-target size-8 mx-2 text-muted-foreground hover:text-primary"
           title="Toggle theme"
           onClick={toggleTheme}
         >

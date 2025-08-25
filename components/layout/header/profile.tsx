@@ -127,6 +127,7 @@ export function Profile() {
           <Button
             size={"sm"}
             variant="outline"
+            className="text-muted-foreground hover:text-primary"
           >
             {lt("sign-in", "Sign In")}
           </Button>
