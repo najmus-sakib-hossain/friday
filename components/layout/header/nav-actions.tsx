@@ -123,10 +123,6 @@ export function NavDesktopActions({ items = mainNav }: NavDesktopActionsProps) {
                     );
                 })}
             </SidebarMenu>
-            {state === "expanded" && (<>
-                <div className="mx-auto h-auto w-[99%] border-t border-dashed" />
-                <History />
-            </>)}
         </div>
     );
 }

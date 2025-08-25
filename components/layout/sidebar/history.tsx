@@ -300,7 +300,7 @@ export function History() {
 
   if (!userUid) {
     return (
-      <div className="px-1 py-0 text-start text-sm text-muted-foreground">
+      <div className="px-2 py-0 text-start text-sm text-muted-foreground">
         {lt("chat-history-notice", "You need to be logged in to view your chat history.")}
       </div>
     );
@@ -309,7 +309,7 @@ export function History() {
   if (isLoading) {
     return (
       <SidebarGroup>
-        <div className="px-1 py-0 text-start">
+        <div className="px-2 py-0 text-start">
           <Loader className="animate-spin inline-block mr-2 size-4" />
           Loading chats...
         </div>
@@ -319,7 +319,7 @@ export function History() {
 
   if (chatsError) {
     return (
-        <div className="px-1 py-0 text-start text-red-500">
+        <div className="px-2 py-0 text-start text-red-500">
           Error loading chats.
         </div>
     );
