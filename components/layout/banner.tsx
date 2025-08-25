@@ -20,7 +20,7 @@ export function Banner({ title, message }: NotificationProps) {
       <div className="p-4">
         <div className="flex justify-between items-start">
           {title && <div className="text-sm">{title}</div>}
-          <button onClick={() => setIsVisible(false)} className="hover:text-primary transition-colors">
+          <button onClick={() => setIsVisible(false)} className="hover:text-primary transition-colors hover:bg-red-500">
             <X size={16} />
             <span className="sr-only">Close</span>
           </button>

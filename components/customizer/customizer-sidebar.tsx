@@ -15,62 +15,25 @@ import {
   SidebarRail,
   useSidebar,
 } from "@/components/ui/sidebar";
-import { Skeleton } from "@/components/ui/skeleton";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ActionButtons } from "@/components/customizer/action-buttons";
 import { ColorTokens } from "@/components/customizer/color-tokens";
 import { ComingSoon } from "@/components/customizer/coming-soon";
 import {
   AllPresetsControl,
   ControlSection,
-  ControlsSkeleton,
   RadiusSliderControl,
   ShadowsControl,
   SurfaceShadesControl,
 } from "@/components/customizer/customizer-controls";
-
-
 import { Typography } from "@/components/customizer/typography";
-import Link from "next/link"
 import {
-  AudioWaveform,
-  Blocks,
-  BookOpen,
-  Bot,
-  Calendar,
-  CircleSlash2,
-  Ellipsis,
-  Frame,
-  GalleryVerticalEnd,
-  Gift,
-  Heart,
-  Home,
   Info,
-  LibraryBig,
-  Map,
-  MessageCircleQuestion,
   PanelRight,
-  PieChart,
-  Plus,
-  Settings2,
-  Sparkles,
-  SquareTerminal,
-  Trash2,
 } from "lucide-react"
-import {
-  SidebarMenuButton,
-  SidebarMenuItem,
-} from "@/components/ui/sidebar"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
-// import { History } from "@/components/layout/sidebar/history"
 import { TeamSwitcher } from "@/components/layout/sidebar/team-switcher"
-import { useCallback, useEffect } from "react"
-import { v4 as uuidv4 } from "uuid"
-import { useRouter } from "next/navigation"
-import { toast } from "sonner"
 import { Banner } from "@/components/layout/banner"
-import { usePathname } from "next/navigation";
-import { Globe, Check } from "lucide-react";
+import { Check } from "lucide-react";
 import { useState } from "react";
 import { NavDesktopActions, NavMobileActions } from "../layout/header/nav-actions";
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "../ui/command";
